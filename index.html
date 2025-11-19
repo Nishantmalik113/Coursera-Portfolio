@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Your Name | Front-End Developer Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio website of Your Name, a front-end developer showcasing projects, skills, and contact information."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="logo-title">
+      <span class="logo" aria-hidden="true">&#60;/&#62;</span>
+      <div>
+        <h1>Your Name</h1>
+        <p class="tagline">Front-End Developer</p>
+      </div>
+    </div>
+
+    <button
+      class="nav-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+    >
+      ☰
+    </button>
+
+    <nav
+      id="primary-nav"
+      class="site-nav"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="about-content">
+        <figure class="profile-figure">
+          <img
+            src="images/profile.jpg"
+            alt="Portrait of Your Name"
+            class="profile-image"
+          />
+        </figure>
+        <div>
+          <h2>About Me</h2>
+          <p>
+            Hi, I'm <strong>Your Name</strong>, a front-end developer
+            who enjoys building clean, accessible, and responsive web
+            experiences. I like working with HTML, CSS, and JavaScript
+            to turn ideas into interactive interfaces.
+          </p>
+          <p>
+            This portfolio was built using HTML, CSS, and JavaScript
+            with the assistance of AI tools like Microsoft Copilot to
+            streamline the coding process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <header class="section-header">
+        <h2>Projects</h2>
+        <p>Some of the work I've done recently.</p>
+      </header>
+
+      <!-- Filter Buttons -->
+      <div class="projects-filter" role="group" aria-label="Filter projects">
+        <button
+          class="filter-btn active"
+          data-filter="all"
+          type="button"
+        >
+          All
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="web"
+          type="button"
+        >
+          Web
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="ui"
+          type="button"
+        >
+          UI
+        </button>
+      </div>
+
+      <div class="projects-grid">
+        <article
+          class="project-card"
+          data-category="web"
+        >
+          <figure class="project-figure">
+            <img
+              src="images/project1.jpg"
+              alt="Screenshot of responsive portfolio website project"
+              class="project-image"
+            />
+            <figcaption>Responsive Portfolio</figcaption>
+          </figure>
+          <h3>Responsive Portfolio</h3>
+          <p>
+            A responsive portfolio website built with semantic HTML,
+            modern CSS (Flexbox & Grid), and vanilla JavaScript.
+          </p>
+          <button
+            class="view-image-btn"
+            type="button"
+          >
+            View Screenshot
+          </button>
+        </article>
+
+        <article
+          class="project-card"
+          data-category="ui"
+        >
+          <figure class="project-figure">
+            <img
+              src="images/project2.jpg"
+              alt="Screenshot of a dashboard UI with charts and cards"
+              class="project-image"
+            />
+            <figcaption>Dashboard UI</figcaption>
+          </figure>
+          <h3>Dashboard UI</h3>
+          <p>
+            A clean dashboard interface focused on layout, typography,
+            and accessible color contrast.
+          </p>
+          <button
+            class="view-image-btn"
+            type="button"
+          >
+            View Screenshot
+          </button>
+        </article>
+
+        <!-- Add more projects as needed -->
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li class="skill-item" aria-label="HTML5 skill">
+          <span class="skill-icon" aria-hidden="true">📄</span>
+          <span>HTML5</span>
+        </li>
+        <li class="skill-item" aria-label="CSS3 skill">
+          <span class="skill-icon" aria-hidden="true">🎨</span>
+          <span>CSS3 (Flexbox, Grid)</span>
+        </li>
+        <li class="skill-item" aria-label="JavaScript skill">
+          <span class="skill-icon" aria-hidden="true">⚙️</span>
+          <span>JavaScript (ES6+)</span>
+        </li>
+        <li class="skill-item" aria-label="Accessibility skill">
+          <span class="skill-icon" aria-hidden="true">♿</span>
+          <span>Accessibility & ARIA</span>
+        </li>
+        <li class="skill-item" aria-label="Responsive design skill">
+          <span class="skill-icon" aria-hidden="true">📱</span>
+          <span>Responsive Design</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <h2>Contact</h2>
+      <p>
+        Have a question or want to work together? Fill out the form
+        below.
+      </p>
+
+      <form
+        id="contact-form"
+        class="contact-form"
+        novalidate
+        aria-label="Contact form"
+      >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            autocomplete="name"
+          />
+          <p class="error-message" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+          />
+          <p class="error-message" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+          ></textarea>
+          <p class="error-message" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+        <p
+          id="form-status"
+          class="form-status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal for Project Images -->
+  <div
+    id="lightbox"
+    class="lightbox"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="lightbox-content">
+      <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Close image preview"
+      >
+        ×
+      </button>
+      <img
+        id="lightbox-image"
+        src=""
+        alt="Enlarged project screenshot"
+      />
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
